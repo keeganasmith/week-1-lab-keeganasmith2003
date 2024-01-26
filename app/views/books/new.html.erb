@@ -1,0 +1,37 @@
+<%= link_to "Home", controller: "home", action: "index" %>
+
+<div class="books new">
+  <h2>Create Book</h2>
+
+  <%= form_for(@book) do |f| %>
+    <% # url: tasks_path, method: 'post' %>
+
+    <table summary="book form fields">
+      <tr>
+        <th>Name</th>
+        <td><%= f.text_field(:title) %></td>
+      </tr>
+      <%
+=begin%>
+ <tr>
+        <th>Position</th>
+        <td><%= f.text_field(:position) %></td>
+      </tr>
+      <tr>
+        <th>Completed</th>
+        <td><%= f.check_box(:completed) %></td>
+      </tr>
+      <tr>
+        <th>Description</th>
+        <td><%= f.text_area(:description) %></td>
+      </tr> 
+<%
+=end%>
+    </table>
+
+    <div class="form-buttons">
+      <%= f.submit("Create Book") %>
+    </div>
+
+  <% end %>
+</div>

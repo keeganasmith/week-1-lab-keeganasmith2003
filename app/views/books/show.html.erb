@@ -1,0 +1,45 @@
+<%= link_to "Home", controller: "home", action: "index" %>
+
+<div class="books show">
+  <h2>Show book</h2>
+
+  <table summary="Book detail view">
+    <tr>
+      <th>Title</th>
+      <td><%= @book.title %></td>
+    </tr>
+    <%
+=begin%>
+ <tr>
+      <th>Position</th>
+      <td><%= @task.position %></td>
+    </tr>
+    <tr>
+      <th>Completed</th>
+      <td><%= @task.completed? ? 'Yes' : 'No' %></td>
+    </tr>
+    <tr>
+      <th>Description</th>
+      <td><%= @task.description %></td>
+    </tr>
+    <tr>
+      <th>Category</th>
+      <td>
+        <% if @task.category %>
+          <%= @task.category.name %>
+        <% end %>
+      </td>
+    </tr>
+    <tr>
+      <th>Created</th>
+      <td><%= @task.created_at %></td>
+    </tr>
+    <tr>
+      <th>Updated</th>
+      <td><%= @task.updated_at %></td>
+    </tr> 
+<%
+=end%>
+  </table>
+
+</div>
