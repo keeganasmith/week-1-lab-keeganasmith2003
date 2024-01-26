@@ -1,7 +1,7 @@
 <%= link_to "Home", controller: "home", action: "index" %>
 
-<div class="tasks new">
-  <h2>Create Task</h2>
+<div class="books new">
+  <h2>Create Book</h2>
 
   <%= form_for(@book) do |f| %>
     <% # url: tasks_path, method: 'post' %>
@@ -30,7 +30,7 @@
     </table>
 
     <div class="form-buttons">
-      <%= f.submit("Create Task") %>
+      <%= f.submit("Create Book") %>
     </div>
 
   <% end %>
