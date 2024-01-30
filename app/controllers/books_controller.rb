@@ -16,8 +16,10 @@ class BooksController < ApplicationController
       flash[:notice] = 'Book was created.'
 
       redirect_to "/"
+    else 
+      flash[:notice] = 'Book was not created.'
+      redirect_to "/"
     end
-
   end
 
   def edit
