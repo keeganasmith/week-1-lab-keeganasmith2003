@@ -16,12 +16,24 @@
             <td><%= f.text_field(:author) %></td>
         </tr>
         <tr>
-            <th>Publish Date</th>
-            <td><%= f.text_field(:publish_date) %></td>
-        </tr>
+        <th>Publish Date</th>
+        <td><%= f.date_select :publish_date %></td>
+      </tr>
         <tr>
             <th>Price</th>
             <td><%= f.text_field(:price) %></td>
+        </tr>
+        <tr>
+            <th>Publisher</th>
+            <td><%= f.text_field(:publisher) %></td>
+        </tr>
+        <tr>
+            <th>Release Date</th>
+            <td><%= f.date_select :release_date %></td>
+        </tr>
+        <tr>
+            <th>Pages</th>
+            <td><%= f.text_field(:pages) %></td>
         </tr>
     </table>
 
