@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :user_books
+  resources :users
   
   resources :books
   resources :books do
@@ -10,6 +12,6 @@ Rails.application.routes.draw do
 
   # Defines the root path route ("/")
   # root "articles#index"
-  root 'home#index'
+  root 'user_books#index'
   
 end
